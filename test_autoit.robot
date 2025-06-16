@@ -1,4 +1,4 @@
-# Este script utiliza o Robot Framework em conjunto com a AutoItLibrary para automatizar completamente a interação com a Calculadora nativa do Windows 11, realizando todas as operações através de comandos de teclado.
+# Este script utiliza o Robot Framework em conjunto com a AutoItLibrary para automatizar a interação com a Calculadora nativa do Windows 11, realizando  operações através de comandos de teclado.
 
 *** Settings ***
 Library    AutoItLibrary
