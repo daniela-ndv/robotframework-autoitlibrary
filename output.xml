@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-16T14:17:50.950211" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Autoit" source="C:\Users\danie\projetos\Estudos\robotframework-autoitlibrary-test\test_autoit.robot">
+<test id="s1-t1" name="Teste Calculadora" line="10">
+<kw name="Abrir Calculadora">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Run" owner="AutoItLibrary">
+<msg time="2025-06-16T14:17:51.025367" level="INFO">AutoItLibrary.Run(FileName='calc.exe', WorkingDir='', Flag='')</msg>
+<arg>${CALC_EXE}</arg>
+<doc>Direct wrapper for AutoIt's Run method.</doc>
+<status status="PASS" start="2025-06-16T14:17:51.018931" elapsed="0.006589"/>
+</kw>
+<msg time="2025-06-16T14:17:51.025716" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>Run</arg>
+<arg>${CALC_EXE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-16T14:17:51.018738" elapsed="0.007007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-16T14:17:51.026297" level="INFO">Calculadora aberta via path padrão</msg>
+<arg>Calculadora aberta via path padrão</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-16T14:17:51.026193" elapsed="0.000153"/>
+</kw>
+<arg>${result}</arg>
+<arg>Log</arg>
+<arg>Calculadora aberta via path padrão</arg>
+<arg>ELSE</arg>
+<arg>Abrir Calculadora Alternativo</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-16T14:17:51.025939" elapsed="0.000461"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:53.026942" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:51.026490" elapsed="2.000586"/>
+</kw>
+<kw name="Win Exists" owner="AutoItLibrary">
+<msg time="2025-06-16T14:17:53.028251" level="INFO">${window_exists} = 1</msg>
+<var>${window_exists}</var>
+<arg>${CALC_TITLE}</arg>
+<doc>method WinExists</doc>
+<status status="PASS" start="2025-06-16T14:17:53.027227" elapsed="0.001059"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${window_exists}</arg>
+<arg>A calculadora não foi aberta via nenhum path</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-06-16T14:17:53.028382" elapsed="0.000143"/>
+</kw>
+<doc>Abre calculadora verificando diferentes paths possíveis</doc>
+<status status="PASS" start="2025-06-16T14:17:51.018011" elapsed="2.010570"/>
+</kw>
+<kw name="Realizar Operacoes Avancadas">
+<kw name="Win Activate" owner="AutoItLibrary">
+<arg>${CALC_TITLE}</arg>
+<doc>method WinActivate</doc>
+<status status="PASS" start="2025-06-16T14:17:53.029173" elapsed="0.503255"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:54.033885" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:53.532735" elapsed="0.501351"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>{(}15{+}5{)}{*}2{=}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:17:54.034228" elapsed="0.156430"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:55.191397" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:54.190903" elapsed="1.000796"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-16T14:17:55.192516" level="INFO">Operação com parênteses: (15 + 5) * 2 = 40</msg>
+<arg>Operação com parênteses: (15 + 5) * 2 = 40</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-16T14:17:55.192108" elapsed="0.000530"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>{DELETE}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:17:55.192897" elapsed="0.032218"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:55.725765" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:55.225272" elapsed="0.500751"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>12.5{+}7.3{=}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:17:55.726360" elapsed="0.126339"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:56.853546" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:55.852873" elapsed="1.000934"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-16T14:17:56.854554" level="INFO">Operação decimal: 12.5 + 7.3 = 19.8</msg>
+<arg>Operação decimal: 12.5 + 7.3 = 19.8</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-16T14:17:56.854200" elapsed="0.000463"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>{DELETE}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:17:56.854879" elapsed="0.031990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:57.387619" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:56.887032" elapsed="0.500838"/>
+</kw>
+<doc>Realiza operações matemáticas mais complexas usando apenas teclas</doc>
+<status status="PASS" start="2025-06-16T14:17:53.028966" elapsed="4.359170"/>
+</kw>
+<kw name="Realizar Operações Especiais">
+<kw name="Win Activate" owner="AutoItLibrary">
+<arg>${CALC_TITLE}</arg>
+<doc>method WinActivate</doc>
+<status status="PASS" start="2025-06-16T14:17:57.390103" elapsed="0.508539"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:58.400495" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:57.899235" elapsed="0.501522"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>25</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:17:58.401005" elapsed="0.043506"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:58.945780" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:58.444784" elapsed="0.501240"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>{CTRL down}{SHIFT down}2{SHIFT up}{CTRL up}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:17:58.946191" elapsed="0.052204"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:17:59.999713" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:17:58.998593" elapsed="1.001390"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-16T14:18:00.000725" level="INFO">Testado raiz quadrada de 25</msg>
+<arg>Testado raiz quadrada de 25</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-16T14:18:00.000303" elapsed="0.000516"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>{DELETE}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:18:00.001002" elapsed="0.092358"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:18:00.594350" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:18:00.093616" elapsed="0.500989"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>200{*}50{%}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:18:00.594931" elapsed="0.116972"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:18:01.713027" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:18:00.712241" elapsed="1.001049"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-16T14:18:01.714090" level="INFO">Testado 50% de 200</msg>
+<arg>Testado 50% de 200</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-16T14:18:01.713671" elapsed="0.000863"/>
+</kw>
+<doc>Testa funcionalidades especiais da calculadora usando teclas</doc>
+<status status="PASS" start="2025-06-16T14:17:57.389416" elapsed="4.325353"/>
+</kw>
+<kw name="Fechar Calculadora">
+<kw name="Win Activate" owner="AutoItLibrary">
+<arg>${CALC_TITLE}</arg>
+<doc>method WinActivate</doc>
+<status status="PASS" start="2025-06-16T14:18:01.716587" elapsed="0.513780"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:18:02.732054" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:18:02.231105" elapsed="0.501247"/>
+</kw>
+<kw name="Send" owner="AutoItLibrary">
+<arg>{ALT down}{F4}{ALT up}</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2025-06-16T14:18:02.732698" elapsed="0.045628"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-16T14:18:03.778974" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-16T14:18:02.778489" elapsed="1.000701"/>
+</kw>
+<kw name="Win Exists" owner="AutoItLibrary">
+<msg time="2025-06-16T14:18:03.782641" level="INFO">${window_exists} = 0</msg>
+<var>${window_exists}</var>
+<arg>${CALC_TITLE}</arg>
+<doc>method WinExists</doc>
+<status status="PASS" start="2025-06-16T14:18:03.779816" elapsed="0.002905"/>
+</kw>
+<kw name="Should Not Be True" owner="BuiltIn">
+<arg>${window_exists}</arg>
+<arg>A calculadora não foi fechada</arg>
+<doc>Fails if the given condition is true.</doc>
+<status status="PASS" start="2025-06-16T14:18:03.782964" elapsed="0.000362"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-16T14:18:03.783652" level="INFO">Calculadora fechada usando Alt+F4</msg>
+<arg>Calculadora fechada usando Alt+F4</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-16T14:18:03.783508" elapsed="0.000212"/>
+</kw>
+<doc>Fecha a calculadora usando teclas</doc>
+<status status="PASS" start="2025-06-16T14:18:01.715878" elapsed="2.067954"/>
+</kw>
+<doc>Teste abrindo calculadora e testando múltiplas operações</doc>
+<tag>calculadora</tag>
+<tag>windows 11</tag>
+<status status="PASS" start="2025-06-16T14:17:51.016503" elapsed="12.767765"/>
+</test>
+<status status="PASS" start="2025-06-16T14:17:50.951801" elapsed="12.833980"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">calculadora</stat>
+<stat pass="1" fail="0" skip="0">windows 11</stat>
+</tag>
+<suite>
+<stat name="Test Autoit" id="s1" pass="1" fail="0" skip="0">Test Autoit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
